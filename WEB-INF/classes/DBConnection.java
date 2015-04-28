@@ -15,7 +15,7 @@ public class DBConnection{
 	public DBConnection(){
 		try{
 			url = "jdbc:mysql://localhost/"+base;
-			Class.forName("com.mysql.jdbc.Driver").newInstance(); //Esto qué es?
+			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(url,user,password);
 			stat = con.createStatement();
 		}catch(Exception e){
@@ -27,7 +27,7 @@ public class DBConnection{
 		try{
 			this.host = host;
 			url = "jdbc:mysql://"+host+"/"+base;
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(url,user,password);
 			stat = con.createStatement();
 		}catch(Exception e){
@@ -42,7 +42,10 @@ public class DBConnection{
 			//id_administracion, nombres, apellido_paterno, apellido_materno, rol
 			ResultSet res = executeQuery(query);
 			System.out.println(res.next());
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 			if(res.next()){
 				user = new PAdministracion();
 				user.setId(res.getString("id_administracion"));
