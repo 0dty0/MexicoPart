@@ -7,7 +7,7 @@
 <title>No Autorizado</title>
 </head>
 <body>
-	El usuario no existeee
+	El usuario no existe
 	<c:redirect url="./index.html" />
 </body>
 </html>
