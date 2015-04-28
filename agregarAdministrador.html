@@ -1,8 +1,73 @@
 <html>
 	<head>
 		<title>Agregar Administrador</title>
+		<script type = "text/javascript">
+            function validate(){
+                var usuario = document.forms["administrador"]["usuario"].value;
+                var password = document.forms["administrador"]["password"].value;
+                var nombres = document.forms["administrador"]["nombres"].value;
+                var paterno = document.forms["administrador"]["paterno"].value;
+                var materno = document.forms["administrador"]["materno"].value;
+                var telefono = document.forms["administrador"]["telefono"].value;
+                var email = document.forms["administrador"]["email"].value;
+                var calle = document.forms["administrador"]["calle"].value;
+                var colonia = document.forms["administrador"]["colonia"].value;
+                var ciudad = document.forms["administrador"]["ciudad"].value;
+                var estado = document.forms["administrador"]["estado"].value;
+                var cp = document.forms["administrador"]["codigoPostal"].value;
+                
+                if(usuario ===null || usuario===""){
+                    alert("Ingrese un usuario");
+                    return false;
+                }
+                if(password ===null || password===""){
+                    alert("Ingrese su contraseña");
+                    return false;
+                }
+                if(nombres ===null || nombres===""){
+                    alert("Ingrese su nombre");
+                    return false;
+                }
+                if(paterno===null || paterno ===""){
+                    alert("Ingrese su primer apellido");
+                    return false;
+                }
+                if(telefono===null || telefono ===""){
+                    alert("Ingrese su tel\xE9fono");
+                    return false;
+                }
+                if(calle===null || calle ===""){
+                    alert("Ingrese su calle");
+                    return false;
+                }
+                if(colonia===null || colonia ===""){
+                    alert("Ingrese su colonia");
+                    return false;
+                }
+                if(ciudad===null || ciudad ===""){
+                    alert("Ingrese su ciudad");
+                    return false;
+                }
+                if(estado===null || estado ===""){
+                    alert("Ingrese su estado");
+                    return false;
+                }
+                if(cp===null || cp ===""){
+                    alert("Ingrese su c\xF3digo postal");
+                    return false;
+                }
+                if(email!==null || email!==""){
+                    var posat=email.indexOf("@");
+                    var posdot = email.indexOf(".");
+                    if (posat<1 || posdot<posat+2 || posdot+2>=x.length){
+                        alert("El e-mail no es v\xE1lido");
+                        return false;
+                    }
+                }
+            }
+        </script>
 	</head>
-	<form method = "post" name = "administrador" action = "./altaAdministrador">
+	<form method = "post" name = "administrador" onsubmit="return (validate());" action = "./altaAdministrador">
 	            <center>
 	                <div id ="agregarAdministrador">
 	                    <fieldset>
