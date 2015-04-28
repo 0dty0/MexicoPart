@@ -1,0 +1,166 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+<display-name>
+	AMSS
+</display-name>
+
+<session-config>
+	<session-timeout>
+		30
+	</session-timeout>
+</session-config>
+<!--Usuario y password de base de datos-->
+<context-param> 
+	<description>
+		Usuario base de datos
+	</description>
+	<!--variable con la que lo saca el servlet, id--> 
+	<param-name>
+		usuario
+	</param-name> 
+	<param-value>
+		root
+	</param-value> 
+</context-param>
+
+<context-param> 
+	<description>
+		Password base de datos
+	</description> 
+	<param-name>
+		pass
+	</param-name> 
+	<param-value>
+		root
+	</param-value> 
+</context-param>
+
+<context-param> 
+	<description>
+		Base de datos
+	</description> 
+	<param-name>
+		base
+	</param-name> 
+	<param-value>
+		mydb
+	</param-value> 
+</context-param> 
+<context-param> 
+	<description>
+		Llave AES
+	</description> 
+	<param-name>
+		llave
+	</param-name> 
+	<param-value>
+		root
+	</param-value> 
+</context-param> 
+
+<!-- ***************Login****************-->
+<servlet>
+
+	 	<servlet-name>
+			 ServletLogin
+		</servlet-name>
+
+		<servlet-class>
+			 Login
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			ServletLogin
+		</servlet-name>
+
+		<url-pattern>
+			/login
+		</url-pattern>
+
+</servlet-mapping>
+<!-- ***************Tabla de administradores****************-->
+<servlet>
+
+	 	<servlet-name>
+			 TablaAdmin
+		</servlet-name>
+
+		<servlet-class>
+			 TablaAdministradores
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			TablaAdmin
+		</servlet-name>
+
+		<url-pattern>
+			/administradores
+		</url-pattern>
+
+</servlet-mapping>
+<!-- ***************Logout****************-->
+<servlet>
+
+	 	<servlet-name>
+			 ServletLogout
+		</servlet-name>
+		
+		<servlet-class>
+			 Logout
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			ServletLogout
+		</servlet-name>
+
+		<url-pattern>
+			/logout
+		</url-pattern>
+
+</servlet-mapping>
+<!-- ***************Agregar Administrador****************-->
+<servlet>
+
+	 	<servlet-name>
+			 AgregarAdmin
+		</servlet-name>
+		
+		<servlet-class>
+			 AgregarAdministrador
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			AgregarAdmin
+		</servlet-name>
+
+		<url-pattern>
+			/altaAdministrador
+		</url-pattern>
+
+</servlet-mapping>
+</web-app>
