@@ -1,3 +1,6 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 	<head>
 		<title>Agregar Administrador</title>
@@ -16,26 +19,35 @@
                 var estado = document.forms["administrador"]["estado"].value;
                 var cp = document.forms["administrador"]["codigoPostal"].value;
                 
-                if(usuario ===null || usuario===""){
+                if(usuario === null || usuario===""){
                     alert("Ingrese un usuario");
                     return false;
                 }
-                if(password ===null || password===""){
+                if(password === null || password===""){
                     alert("Ingrese su contraseña");
                     return false;
                 }
-                if(nombres ===null || nombres===""){
+                if(nombres === null || nombres===""){
                     alert("Ingrese su nombre");
                     return false;
                 }
-                if(paterno===null || paterno ===""){
+                if(paterno=== null || paterno ===""){
                     alert("Ingrese su primer apellido");
                     return false;
                 }
-                if(telefono===null || telefono ===""){
+                if(telefono=== null || telefono ===""){
                     alert("Ingrese su tel\xE9fono");
                     return false;
                 }
+                if(email!==null || email!==""){//agregar lo de la variable x
+                    var posat=email.indexOf("@");
+                    var posdot = email.indexOf(".");
+                    if (posat<1 || posdot<posat+2 || posdot+2>=x.length){
+                        alert("El e-mail no es v\xE1lido");
+                        return false;
+                    }
+                }
+
                 if(calle===null || calle ===""){
                     alert("Ingrese su calle");
                     return false;
@@ -56,17 +68,11 @@
                     alert("Ingrese su c\xF3digo postal");
                     return false;
                 }
-                if(email!==null || email!==""){
-                    var posat=email.indexOf("@");
-                    var posdot = email.indexOf(".");
-                    if (posat<1 || posdot<posat+2 || posdot+2>=x.length){
-                        alert("El e-mail no es v\xE1lido");
-                        return false;
-                    }
-                }
             }
         </script>
 	</head>
+	<body>
+	
 	<form method = "post" name = "administrador" onsubmit="return (validate());" action = "./altaAdministrador">
 	            <center>
 	                <div id ="agregarAdministrador">
@@ -130,4 +136,5 @@
 	                </div>
 	            </center>
 	        </form>
+	        </body>
 </html>

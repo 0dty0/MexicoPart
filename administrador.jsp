@@ -13,7 +13,7 @@
 			Login de administrador exitoso
 		</c:when>
 		<c:otherwise>
-			<c:redirect url="./index.html" />
+			<c:redirect url="./index.jsp" />
 		</c:otherwise>
 		
 	</c:choose>	
