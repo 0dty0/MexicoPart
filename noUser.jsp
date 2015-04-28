@@ -8,6 +8,6 @@
 </head>
 <body>
 	El usuario no existe
-	<c:redirect url="./index.jsp" />
+	<!--<c:redirect url="./index.jsp" />-->
 </body>
 </html>

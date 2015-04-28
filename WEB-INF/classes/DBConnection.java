@@ -12,7 +12,7 @@ public class DBConnection{
 	private String url;
 	private String host="localhost";
 
-	public DBConnection(){ 
+	public DBConnection(){
 		try{
 			url = "jdbc:mysql://localhost/"+base;
 			Class.forName("com.mysql.jdbc.Driver");
@@ -22,7 +22,7 @@ public class DBConnection{
 			e.printStackTrace();
 		}
 	}
-	
+
 	public DBConnection(String host){
 		try{
 			this.host = host;
@@ -34,14 +34,18 @@ public class DBConnection{
 			e.printStackTrace();
 		}
 	}
-	
+
 	public PAdministracion login(String username, String password){
 		PAdministracion user = null;
 		try{
 			String query = "SELECT id_administracion, nombres, apellido_paterno, apellido_materno, rol FROM Administracion WHERE id_administracion = '"+username+"' AND password = AES_ENCRYPT('"+password+"','"+llaveAES+"');";
-			//id_administracion, nombres, apellido_paterno, apellido_materno, rol  
+			//id_administracion, nombres, apellido_paterno, apellido_materno, rol
 			ResultSet res = executeQuery(query);
 			System.out.println(res.next());
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
 			if(res.next()){
 				user = new PAdministracion();
 				user.setId(res.getString("id_administracion"));
@@ -50,13 +54,13 @@ public class DBConnection{
 				user.setMaterno(res.getString("apellido_materno"));
 				user.setRol(res.getInt("rol"));
 			}
-			
+
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
+
 		return user;
-		
+
 	}
 	public void close() throws SQLException {
 		if(stat != null){
@@ -66,7 +70,7 @@ public class DBConnection{
 			con.close();
 		}
 	}
-	
+
 	public ResultSet executeQuery(String query){
 		ResultSet res = null;
 		try{
@@ -76,7 +80,7 @@ public class DBConnection{
 		}
 		return res;
 	}
-	
+
 	public int executeUpdate(String query){
 		int i = 0;
 		try{
@@ -86,5 +90,5 @@ public class DBConnection{
 		}
 		return i;
 	}
-		
+
 }
