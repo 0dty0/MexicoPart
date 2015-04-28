@@ -19,7 +19,10 @@
 	</c:choose>
 	<a href="./logout">log out</a>
 	<form action="./administradores" method="post">
-		<input type="submit" value="Manejar Administradores" />
+		<input type="submit" value="Manejar administradores" />
+	</form>
+	<form action="./preguntas" method="post">
+		<input type="submit" value="Manejar preguntas" />
 	</form>
 		
 
