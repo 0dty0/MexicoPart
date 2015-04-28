@@ -14,7 +14,7 @@ public class DBConnection{
 
 	public DBConnection(){ 
 		try{
-			url = "jdbc:mysql://localhost:3307/"+base;
+			url = "jdbc:mysql://localhost/"+base;
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection(url,user,password);
 			stat = con.createStatement();
@@ -41,7 +41,6 @@ public class DBConnection{
 			String query = "SELECT id_administracion, nombres, apellido_paterno, apellido_materno, rol FROM Administracion WHERE id_administracion = '"+username+"' AND password = AES_ENCRYPT('"+password+"','"+llaveAES+"');";
 			//id_administracion, nombres, apellido_paterno, apellido_materno, rol  
 			ResultSet res = executeQuery(query);
-			
 			System.out.println(res.next());
 			if(res.next()){
 				user = new PAdministracion();
