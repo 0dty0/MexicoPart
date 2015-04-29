@@ -35,7 +35,7 @@ public class SubmitEditarAdministrador extends HttpServlet{
 				if( !(usuarioAux.equals(usuario)) ){
 					disp = getServletContext().getRequestDispatcher("/userTaken.jsp");
 				}else{
-					query = "UPDATE Administracion SET nombres = '"+nombres+"', apellido_paterno = '"+paterno+"', apellido_materno = '"+materno+"', telefono = '"+telefono+"', correo = '"+telefono+"', direccion = '"+direccion+"' WHERE id_administracion='"+usuario+"'";
+					query = "UPDATE Administracion SET nombres = '"+nombres+"', apellido_paterno = '"+paterno+"', apellido_materno = '"+materno+"', telefono = '"+telefono+"', correo = '"+correo+"', direccion = '"+direccion+"' WHERE id_administracion='"+usuario+"'";
 				dbc.executeUpdate(query);
 				disp = getServletContext().getRequestDispatcher("/adminModificado.jsp");
 				}
