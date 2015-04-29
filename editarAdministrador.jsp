@@ -21,7 +21,6 @@
 		<script type = "text/javascript">
             function validate(){
                 var usuario = document.forms["administrador"]["usuario"].value;
-                var password = document.forms["administrador"]["password"].value;
                 var nombres = document.forms["administrador"]["nombres"].value;
                 var paterno = document.forms["administrador"]["paterno"].value;
                 var materno = document.forms["administrador"]["materno"].value;
@@ -35,10 +34,6 @@
                 
                 if(usuario === null || usuario===""){
                     alert("Ingrese un usuario");
-                    return false;
-                }
-                if(password === null || password===""){
-                    alert("Ingrese su contraseña");
                     return false;
                 }
                 if(nombres === null || nombres===""){
@@ -95,7 +90,7 @@
 		
 	</c:choose>
 	
-	<form method = "post" name = "administrador" onsubmit="return (validate());" action = "./altaAdministrador"> <!--Cambiar el action a modificatAdministrador.jsp-->
+	<form method = "post" name = "administrador" onsubmit="return (validate());" action = "./subedit">
 	            <center>
 	                <div id ="agregarAdministrador">
 	                    <fieldset>
@@ -107,8 +102,6 @@
 	                            <tr>
 	                            	<td>Usuario:</td>
 	                                <td><input type="text" name="usuario" value="${requestScope.user.id}"></td>
-	                                <td>Contrase&ntilde;a:</td>
-	                                <td><input type="password" name="password"></td>
 	                            </tr>
 	                            <tr>
 	                                <td>Nombre(s):</td>
@@ -150,7 +143,7 @@
 	                                <td>&nbsp;</td>
 	                            </tr>
 	                            <tr>
-	                                <td colspan = "6"><input class = "button" type="submit" value="Guardar"/></td>
+	                                <td colspan = "6"><input class = "button" type="submit" value="Editar"/></td>
 	                            </tr>
 	                            
 	                        </table>
