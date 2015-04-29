@@ -213,4 +213,29 @@
 		</url-pattern>
 
 </servlet-mapping>
+<!-- ***************Tabla Preguntas****************-->
+<servlet>
+
+	 	<servlet-name>
+			 preguntas
+		</servlet-name>
+		
+		<servlet-class>
+			 TablaPreguntas
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			preguntas
+		</servlet-name>
+
+		<url-pattern>
+			/preguntas
+		</url-pattern>
+
+</servlet-mapping>
 </web-app>
