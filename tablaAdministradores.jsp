@@ -28,13 +28,13 @@
 					<td>${tuple.correo}</td>
 					<td>${tuple.direccion}</td>
 					<td>
-						<form action="./algo" method="post">
-							<input type = "hidden" value = "${tuple.id}">
+						<form action="./editaradmin" method="post">
+							<input type = "hidden" value = "${tuple.id}" name="editar" id="editar">
 							<input type="submit" value="Modificar" />
 						</form>
 					</td>
 					<td>
-						<form action="./algo" method="post">
+						<form action="./eliminaradmin" method="post">
 							<input type ="hidden" value = "${tuple.id}">
 							<input type="submit" value="Eliminar" />
 						</form>

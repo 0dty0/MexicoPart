@@ -7,9 +7,18 @@ public class PAdministracion{
 	private String correo;
 	private String direccion;
 	private int rol;
-	
 	public PAdministracion(){
 		
+	}
+	public PAdministracion(String id, String nombre, String paterno, String materno, String telefono, String correo, String direccion, int rol){
+		this.id = id;
+		this.nombre = nombre;
+		this.paterno = paterno;
+		this.materno = materno;
+		this.telefono = telefono;
+		this.correo = correo;
+		this.direccion = direccion;
+		this.rol = rol;
 	}
 	public String getId(){
 		return id;

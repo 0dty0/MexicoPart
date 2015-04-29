@@ -28,7 +28,7 @@ public class EditarAdministrador extends HttpServlet{
 				String telefono = res.getString("telefono");
 				String correo = res.getString("correo");
 				String direccion = res.getString("direccion");
-				int rol = res.getString("rol");
+				int rol = res.getInt("rol");
 				
 				user = new PAdministracion(usuario, nombres, paterno, materno, telefono, correo, direccion, rol);
 			}

@@ -88,31 +88,6 @@
 		</url-pattern>
 
 </servlet-mapping>
-<!-- ***************Tabla de administradores****************-->
-<servlet>
-
-	 	<servlet-name>
-			 TablaAdmin
-		</servlet-name>
-
-		<servlet-class>
-			 TablaAdministradores
-		</servlet-class>
-		
-
-</servlet>
-
-<servlet-mapping>
-
-		<servlet-name>
-			TablaAdmin
-		</servlet-name>
-
-		<url-pattern>
-			/administradores
-		</url-pattern>
-
-</servlet-mapping>
 <!-- ***************Logout****************-->
 <servlet>
 
@@ -138,6 +113,31 @@
 		</url-pattern>
 
 </servlet-mapping>
+<!-- ***************Tabla de administradores****************-->
+<servlet>
+
+	 	<servlet-name>
+			 TablaAdmin
+		</servlet-name>
+
+		<servlet-class>
+			 TablaAdministradores
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			TablaAdmin
+		</servlet-name>
+
+		<url-pattern>
+			/administradores
+		</url-pattern>
+
+</servlet-mapping>
 <!-- ***************Agregar Administrador****************-->
 <servlet>
 
@@ -160,6 +160,31 @@
 
 		<url-pattern>
 			/altaAdministrador
+		</url-pattern>
+
+</servlet-mapping>
+<!-- ***************Editar Administrador****************-->
+<servlet>
+
+	 	<servlet-name>
+			 EditAdmin
+		</servlet-name>
+		
+		<servlet-class>
+			 EditarAdministrador
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			EditAdmin
+		</servlet-name>
+
+		<url-pattern>
+			/editaradmin
 		</url-pattern>
 
 </servlet-mapping>

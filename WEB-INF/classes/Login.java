@@ -31,7 +31,7 @@ public class Login extends HttpServlet{
 			 		}else if(rol==2){
 			 			disp =  getServletContext().getRequestDispatcher("/administrador.jsp");
 			 		}else{
-			 			disp = getServletContext().getRequestDispatcher("/error.jsp"); //Hacer página de error
+			 			disp = getServletContext().getRequestDispatcher("/error.jsp");
 			 		}
 			 	}else{
 			 		session.setAttribute("logged",null);
@@ -55,7 +55,8 @@ public class Login extends HttpServlet{
 	private PAdministracion login(String usuario, String password) throws Exception{
  		
  		DBConnection dbc = new DBConnection();
- 		PAdministracion user = dbc.login(usuario, password);
+ 		PAdministracion user = null;
+ 		user = dbc.login(usuario, password);
  			
  		dbc.close();
  		
