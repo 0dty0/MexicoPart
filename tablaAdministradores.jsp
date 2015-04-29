@@ -42,7 +42,7 @@
 				</tr>
 			</c:forEach>
 		</table><br>
-		<form action = "./agregarAdministrador.html" method = "post">
+		<form action = "./agregarAdministrador.jsp" method = "post">
 			<input type = "submit" value = "Agregar" />
 		</form>
 </body>
