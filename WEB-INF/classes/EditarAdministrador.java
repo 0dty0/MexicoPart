@@ -16,7 +16,7 @@ public class EditarAdministrador extends HttpServlet{
 			
 			String usuarioF = request.getParameter("editar");
 			
-			String query = "SELECT id_administracion, nombres, apellido_paterno, apellido_materno, telefono, correo, direccion, rol FROM Administracion WHERE id_administracion = '"+usuarioF+"');";
+			String query = "SELECT id_administracion, nombres, apellido_paterno, apellido_materno, telefono, correo, direccion, rol FROM Administracion WHERE id_administracion = '"+usuarioF+"';";
 			ResultSet res = dbc.executeQuery(query);
 			PAdministracion user = null;
 			

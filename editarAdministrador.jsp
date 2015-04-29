@@ -1,9 +1,23 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:choose> 
+		<c:when test="${sessionScope.logged != null && sessionScope.logged.rol == 1}">
+		</c:when>
+		<c:otherwise>
+			<c:redirect url="./index.jsp" />
+		</c:otherwise>
+		
+</c:choose>
+<c:choose> 
+		<c:when test="${requestScope.user == null}">
+			<c:redirect url = "./agregarAdministrador.jsp" /> <!--Mostrar algun mensaje de que no se encontró el id, pero eso no debería de pasar más que si la tabla está vacía o algo-->
+		</c:when>
+</c:choose>
 <html>
 	<head>
-		<title>Agregar Administrador</title>
+		<title>Editar Administrador</title>
 		<script type = "text/javascript">
             function validate(){
                 var usuario = document.forms["administrador"]["usuario"].value;
@@ -81,7 +95,7 @@
 		
 	</c:choose>
 	
-	<form method = "post" name = "administrador" onsubmit="return (validate());" action = "./altaAdministrador">
+	<form method = "post" name = "administrador" onsubmit="return (validate());" action = "./altaAdministrador"> <!--Cambiar el action a modificatAdministrador.jsp-->
 	            <center>
 	                <div id ="agregarAdministrador">
 	                    <fieldset>
@@ -92,26 +106,26 @@
 	                            </tr>
 	                            <tr>
 	                            	<td>Usuario:</td>
-	                                <td><input type="text" name="usuario"></td>
+	                                <td><input type="text" name="usuario" value="${requestScope.user.id}"></td>
 	                                <td>Contrase&ntilde;a:</td>
 	                                <td><input type="password" name="password"></td>
 	                            </tr>
 	                            <tr>
 	                                <td>Nombre(s):</td>
-	                                <td><input type="text" name="nombres"></td>
+	                                <td><input type="text" name="nombres" value="${requestScope.user.nombre}"></td>
 	                                <td>&nbsp;Apellido Paterno:</td>
-	                                <td><input type="text" name="paterno"></td>
+	                                <td><input type="text" name="paterno" value = "${requestScope.user.paterno}"></td>
 	                                <td>&nbsp;Apellido Materno:</td>
-	                                <td><input type="text" name="materno"></td>
+	                                <td><input type="text" name="materno" value = "${requestScope.user.materno}"></td>
 	                            </tr>
 	                            <tr>
 	                                <td>&nbsp;</td>
 	                            </tr>
 	                            <tr>
 	                                <td>Tel&eacute;fono:</td>
-	                                <td><input type= "text" name="telefono"></td>
+	                                <td><input type= "text" name="telefono" value = "${requestScope.user.telefono}"></td>
 	                                <td>&nbsp;Email:</td>
-	                                <td><input type = "text" name = "email"></td>
+	                                <td><input type = "text" name = "email" value = "${requestScope.user.correo}"></td>
 	                            </tr>
 	                            <tr><td>&nbsp;</td></tr>
 	                            <tr>
@@ -119,7 +133,7 @@
 	                            </tr>
 	                            <tr>
 	                                <td>Calle:</td>
-	                                <td><input type="text" name="calle"></td>
+	                                <td><input type="text" name="calle" value = "${requestScope.user.direccion}"></td>
 	                                <td>Colonia:</td>
 	                                <td><input type="text" name="colonia"></td>
 	                            </tr>

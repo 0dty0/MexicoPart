@@ -22,7 +22,6 @@ public class DBConnection{
 			e.printStackTrace();
 		}
 	}
-
 	public DBConnection(String host){
 		try{
 			this.host = host;
@@ -41,11 +40,7 @@ public class DBConnection{
 			String query = "SELECT id_administracion, nombres, apellido_paterno, apellido_materno, rol FROM Administracion WHERE id_administracion = '"+username+"' AND password = AES_ENCRYPT('"+password+"','"+llaveAES+"');";
 			//id_administracion, nombres, apellido_paterno, apellido_materno, rol
 			ResultSet res = executeQuery(query);
-			System.out.println(res.next());
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 			if(res.next()){
 				user = new PAdministracion();
 				user.setId(res.getString("id_administracion"));
