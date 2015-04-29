@@ -188,4 +188,29 @@
 		</url-pattern>
 
 </servlet-mapping>
+<!-- ***************Sub Editar Administrador****************-->
+<servlet>
+
+	 	<servlet-name>
+			 subEditAdmin
+		</servlet-name>
+		
+		<servlet-class>
+			 SubmitEditarAdministrador
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			subEditAdmin
+		</servlet-name>
+
+		<url-pattern>
+			/subedit
+		</url-pattern>
+
+</servlet-mapping>
 </web-app>

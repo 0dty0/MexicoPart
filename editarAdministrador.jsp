@@ -102,6 +102,7 @@
 	                            <tr>
 	                            	<td>Usuario:</td>
 	                                <td><input type="text" name="usuario" value="${requestScope.user.id}"></td>
+	                                <input type = "hidden" name = "usuarioA" value = "${requestScope.user.id}">
 	                            </tr>
 	                            <tr>
 	                                <td>Nombre(s):</td>
