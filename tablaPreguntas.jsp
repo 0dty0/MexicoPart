@@ -22,14 +22,14 @@
 					<td>${tuple.fecha}</td>
 					<td>${tuple.idA}</td>
 					<td>
-						<form action="./editarpregunta" method="post">
+						<form action="./editar_pregunta_abierta" method="post">
 							<input type = "hidden" value = "${tuple.id}" name="editar" id="editar">
 							<input type="submit" value="Modificar" />
 						</form>
 					</td>
 					<td>
-						<form action="./eliminarpregunta" method="post">
-							<input type ="hidden" value = "${tuple.id}">
+						<form action="./eliminar_pregunta" method="post">
+							<input type ="hidden" value = "${tuple.id}" name = "eliminar">
 							<input type="submit" value="Eliminar" />
 						</form>
 					</td>

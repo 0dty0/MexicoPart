@@ -6,7 +6,7 @@
 		<c:when test="${sessionScope.logged != null && sessionScope.logged.rol == 1}">
 		</c:when>
 		<c:otherwise>
-			<c:redirect url="./index.jsp" />
+			<c:redirect url="./index.jsp" /> <!--Mandar a una ventanda de acceso restringido-->
 		</c:otherwise>
 		
 </c:choose>
@@ -81,15 +81,7 @@
         </script>
 	</head>
 	<body>
-	
-	<c:choose> 
-		<c:when test="${sessionScope.user != null && sessionScope.user.rol == 1}">
-		</c:when>
-		<c:otherwise>
-		</c:otherwise>
 		
-	</c:choose>
-	
 	<form method = "post" name = "administrador" onsubmit="return (validate());" action = "./subedit">
 	            <center>
 	                <div id ="agregarAdministrador">

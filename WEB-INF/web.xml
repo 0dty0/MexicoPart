@@ -288,4 +288,79 @@
 		</url-pattern>
 
 </servlet-mapping>
+<!-- ***************Editar Pregunta****************-->
+<servlet>
+
+	 	<servlet-name>
+			 EditPregunta
+		</servlet-name>
+		
+		<servlet-class>
+			 EditarPregunta
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			EditPregunta
+		</servlet-name>
+
+		<url-pattern>
+			/editar_pregunta_abierta
+		</url-pattern>
+
+</servlet-mapping>
+<!-- ***************Sub Editar Pregunta****************-->
+<servlet>
+
+	 	<servlet-name>
+			 subEditPregunta
+		</servlet-name>
+		
+		<servlet-class>
+			 SubmitEditarPregunta
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			subEditPregunta
+		</servlet-name>
+
+		<url-pattern>
+			/sub_pregunta
+		</url-pattern>
+
+</servlet-mapping>
+<!-- ***************Sub Editar Pregunta****************-->
+<servlet>
+
+	 	<servlet-name>
+			 eliminarPregunta
+		</servlet-name>
+		
+		<servlet-class>
+			 EliminarPregunta
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			eliminarPregunta
+		</servlet-name>
+
+		<url-pattern>
+			/eliminar_pregunta
+		</url-pattern>
+
+</servlet-mapping>
 </web-app>
