@@ -238,4 +238,29 @@
 		</url-pattern>
 
 </servlet-mapping>
+<!-- ***************Eliminar Admiinistrador****************-->
+<servlet>
+
+	 	<servlet-name>
+			 eliminarAdmin
+		</servlet-name>
+		
+		<servlet-class>
+			 EliminarAdministrador
+		</servlet-class>
+		
+
+</servlet>
+
+<servlet-mapping>
+
+		<servlet-name>
+			eliminarAdmin
+		</servlet-name>
+
+		<url-pattern>
+			/eliminaradmin
+		</url-pattern>
+
+</servlet-mapping>
 </web-app>

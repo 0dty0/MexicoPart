@@ -35,7 +35,7 @@
 					</td>
 					<td>
 						<form action="./eliminaradmin" method="post">
-							<input type ="hidden" value = "${tuple.id}">
+							<input type ="hidden" value = "${tuple.id}" name = "eliminar" id="eliminar">
 							<input type="submit" value="Eliminar" />
 						</form>
 					</td>
