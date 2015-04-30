@@ -13,7 +13,7 @@
 				<th>ID Pregunta</th>
 				<th>Pregunta</th>
 				<th>Fecha</th>
-				<th>Administrador</th>
+				<th>Supervisor</th>
 			</tr>
 			<c:forEach items="${requestScope.preguntas}" var = "tuple">
 				<tr>
