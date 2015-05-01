@@ -11,8 +11,6 @@ public class TablaPreguntas extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response){
 
 		try{
-			
-			
 			RequestDispatcher disp = null;
 			DBConnection dbc = new DBConnection();
 			String query = "SELECT id_Pregunta_abierta, texto, fecha, id_administracion FROM Pregunta_abierta";
